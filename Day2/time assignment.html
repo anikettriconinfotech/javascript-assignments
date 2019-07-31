@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function time() {
+        var day = new Date();
+        var hours = day.getHours();
+        var minutes = day.getMinutes();
+        var seconds = day.getSeconds();
+        document.getElementById('txt').innerHTML =
+        hours + ":" + minutes + ":" + seconds;
+        var t = setTimeout(time,1000);
+      }
+    </script>
+  </head>
+  <body onload="time()" >
+    <div id="txt"></div>
+  </body>
+</html>
