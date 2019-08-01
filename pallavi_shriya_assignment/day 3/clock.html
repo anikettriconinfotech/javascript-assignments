@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LIVE CLOCK</title>
+        <style type="text/css">
+        #clock{
+            width: 900px;
+            margin: 150px;
+            text-align: center;
+            font-size:200px;
+
+        }
+        </style>
+    </head>
+    <body>
+        <div id="clock"></div>
+        <script type="text/javascript">
+        setInterval(displayclock,500);
+        function displayclock(){
+            var time=new Date();
+            var hours=time.getHours();
+            var min=time.getMinutes();
+            var sec=time.getSeconds();
+            if(hours>12){
+                hours=hours-12;
+            }
+            if(hours==12)
+            {
+                hours=0;
+            }
+            if(hours<10)
+            {
+                hours='0'+hours;
+            }
+            if(min<10)
+            {
+                min='0'+min;
+            }
+            if(sec<10)
+            {
+                sec='0'+sec;
+            }
+            document.getElementById('clock').innerHTML=hours+':'+min+':'+sec;
+        }
+
+            </script>
+    </body>
+</html>
