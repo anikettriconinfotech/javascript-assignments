@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clock</title>
+    </head>
+
+    <body>
+        <p id="timer" style="font-size: 62px;text-align:center;text-shadow: 2px 2px grey;top:50%;"></p>
+    </body>
+    <script>
+        var d = new Date();
+        var h = d.getHours();
+        var min = d.getMinutes();
+        var sec=1;
+        
+        setInterval(function(){
+            document.getElementById("timer").innerHTML=h + " : " + min + " : "  + sec;
+            if(sec>58)
+            {
+                min++;
+                sec=0;
+            }
+            if(min>58)
+            {
+                h++;
+                min=0;
+            }
+            sec++;
+        },1000)
+
+    </script>
+</html>

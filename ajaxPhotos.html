@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Listing photos using ajax</title>
+<script src="./promises.js">
+</script>
+
+<style>
+.btn
+{
+    width: 90px;
+    height: 60px;
+    background-color:cadetblue; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 40px;
+    color: white;
+}
+.btn:hover
+{
+    opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+<button class="btn" type="button" onClick="getPhotos()">See photos</button>
+<br>
+
+<ul id="photo"></ul>
+
+</body>
+</html>

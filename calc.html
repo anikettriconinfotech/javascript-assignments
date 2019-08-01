@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <script src="app.js"></script>
+
+        <style>
+            .frm
+            {
+                padding: 10px;
+                border: 1px solid darkblue;
+                border-radius: 4px;
+                width: 25%;
+            }
+            .lbl
+            {
+                font-size: 18px;
+                font-family:'Times New Roman', Times, serif;
+                color: darkgray;
+                
+            }
+            .in
+            {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 10px;
+                width: 30%;
+                height: 20px;
+                border: 1px solid lightblue;
+                border-radius: 4px;
+            }
+            .btn
+            {
+                width: 64px;
+                height: 50px;
+                background-color:cadetblue; 
+                border-radius: 5px;
+                cursor: pointer;
+                
+                color: white;
+            }
+            .btn:hover
+            {
+                opacity: 0.8;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form class="frm">
+            <label class="lbl"><b>Enter first number</b></label><br>
+            <input type="number" id="first" class="in"/><br>
+            <label class="lbl"><b>Enter second number</b></label><br>
+            <input type="number" id="second" class="in"/><br>
+            <br>
+            <button type="button" id="add" onclick="calc(this.id)" class="btn">Add</button>
+            <button type="button" id="sub" onclick="calc(this.id)" class="btn">Subtract</button>
+            <button type="button" id="mul" onclick="calc(this.id)" class="btn">Multiply</button>
+            <button type="button" id="div" onclick="calc(this.id)" class="btn">Divide</button>
+            <br><br>
+
+            <input type="text" id="ans" value="" class="in" disabled />
+        </form>
+    </body>
+</html>
