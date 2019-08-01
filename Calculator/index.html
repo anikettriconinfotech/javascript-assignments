@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='calculator.js'></script>
+        <link href='index.css' rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="Inputs">
+            <label style="padding-bottom: 10px">First Number : </label>
+            <input type="number" id='FirstNumber' style="margin-left: 13px"><br><br>
+            <label>Second Number: </label>
+            <input type="number" id='SecondNumber'><br><br>
+            <button type="button" id="Addition" onclick="calci(this.id)">Addition</button>
+            <button type="button" id="Subtraction" onclick="calci(this.id)">Subtraction</button>
+            <button type="button" id="Multiplication" onclick="calci(this.id)">Multiplication</button>
+            <button type="button" id="Division" onclick="calci(this.id)">Division</button>
+            
+        </div>
+        <p id='answerbox'>ANS :<span id="Answer">4545</span></p>
+    </body>
+</html>
