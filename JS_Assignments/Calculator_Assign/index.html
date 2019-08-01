@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      h1 {
+        font-size: 1.5em
+      }
+      input, button {
+        min-width: 72px;
+        min-height: 36px;
+        border: 1px solid grey;
+      }
+      label, input, button {
+        display: block;
+      }
+      input {
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator:</h1>
+    <label for="num1">Number 1</label>
+    <input placeholder="Enter a Number" id="num1" type="number">
+    <label for="num2">Number 2</label>
+    <input placeholder="Enter a Number" id="num2" type="number">
+    <button onclick="plus()">Add</button>
+    <button onclick="minus()">Substract</button>    
+	<button onclick="times()">Multiply</button>
+	<button onclick="divide()">Divide</button>
+    <p></p>
+    <span class="tooltip"><span class="tooltip-content"></span><i class="tooltip-logo"></i><span class="triangle"></span></span>
+	<script src="./assign.js"></script>
+  </body>
+</html>
