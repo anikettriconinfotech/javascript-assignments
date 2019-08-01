@@ -1,0 +1,37 @@
+.hide{
+    display: none;
+ }
+
+.nav-link{
+color: yellow;
+}
+
+.navbar-brand{
+color: yellow;
+}
+
+.navbar-expand-lg{
+background-color:  #1a1a1a ;
+}
+
+#displayBox{
+float: center;
+top: 25%;
+left: 40%;
+display: grid;
+grid-template-columns: 100%;
+}
+
+body{
+overflow-y:scroll; 
+position:relative;
+}
+
+html {
+box-sizing: border-box;
+}
+
+#box{
+    font-size: 30px;
+}
+
