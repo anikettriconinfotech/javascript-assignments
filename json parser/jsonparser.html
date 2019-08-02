@@ -1,0 +1,58 @@
+<!doctype html>
+<head>
+    <title>JSON parser</title>
+    <script>
+
+        function makeAjaxCall(url, methodType){
+            var promiseObj = new Promise(function(resolve, reject){
+               var xhr = new XMLHttpRequest();
+               xhr.open(methodType, url, true);
+               xhr.send();
+               xhr.onreadystatechange = function(){
+               if (xhr.readyState === 4){
+                  if (xhr.status === 200){
+                     console.log("xhr done successfully");
+                     var resp = xhr.responseText;
+                     var data = JSON.parse(resp);
+                     resolve(data);
+                  } else {
+                     reject(xhr.status);
+                     console.log("xhr failed");
+                  }
+               } else {
+                  console.log("xhr processing going on");
+               }
+            }
+            console.log("request sent succesfully");
+          });
+          return promiseObj;
+         }
+        
+          var URL = "https://jsonplaceholder.typicode.com/photos";
+          function call() {
+            makeAjaxCall(URL, "GET").then(responseHandler, errorHandler);
+        };
+        function responseHandler(data){
+            for(var i=0;data[i]!=undefined;i++){
+        var x = document.createElement("IMG");
+  x.setAttribute("src",  data[i].url);
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+  x.setAttribute("alt", "The Pulpit Rock");
+  document.body.appendChild(x);
+  }
+}
+function errorHandler(err){
+ console.log("error", err);
+}
+        
+        
+        </script>
+        </head>
+<body onload="call()">
+
+        <div id="section"></div>
+        <div id="image" ></div>
+
+</body>
+</html>

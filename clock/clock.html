@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html>  
+<body onload="startTimer()">  
+<p id="time">Clock!</p>  
+<script>  
+
+function startTimer() {  
+var hour=0;  
+var min=0;  
+var sec=0;  
+setInterval(function(){  
+sec=sec+1;  
+if(sec==60)  
+{  
+min=min+1;  
+sec=0;  
+}  
+if(min==60)  
+{  
+hour=hour+1;  
+min=0;  
+}  
+if(hour==24)  
+{  
+hour=0;  
+}  
+ document.getElementById("time").innerHTML=hour+" : "+min+" : "+sec;  
+  },1000);  
+}  
+
+</script>  
+</body>  
+</html> 
