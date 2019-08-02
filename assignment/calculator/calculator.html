@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>
+            My calculator
+        </title>
+        <link rel="stylesheet" type="text/css" href="calc.css">
+    </head>
+
+    <body>
+        
+        <div style  = "text-align: center;padding: 50px;background-color:rgb(153, 146, 140)">
+        <input type="number" placeholder = "Number 1 " id = "number1" style = "padding: 5px">
+        <input type="number" placeholder = "Number 2 " id = "number2" style = "padding: 5px" >
+        <br>
+        <div style = "padding: 30px">
+            <button type="button" onclick="add()" class ="btn">ADD</button>
+            <button type="button" onclick="sub()" class ="btn">SUB</button>
+            <button type="button" onclick="mul()" class ="btn">MULTIPLY</button>
+            <button type="button" onclick="div()" class ="btn">DIVIDE</button>
+        </div>
+        <p id ="showResult" style = "font-size: 60px;color: darkred"></p>
+        </div>
+
+    </body>
+    <script src ="./calc.js"></script>
+
+
+</html>
