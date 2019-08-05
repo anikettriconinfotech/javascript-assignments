@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+ 
+<input type="text" id="num1"/> *
+<input type="text" id="num2"/> =
+<input type="text" id="mul"/>
+<input type="button" value="Calculate the multiplication" onclick="calc()"/>
+ 
+<script>
+    function calc() {
+        let num1 = Number(document.querySelector("#num1").value);
+        let num2 = Number(document.querySelector("#num2").value);
+        let mul = num1 * num2;
+        document.getElementById("mul").value = mul;
+    }
+</script>
+ 
+</body>
+</html>
